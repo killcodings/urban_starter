@@ -1,0 +1,18 @@
+
+[data-key="field_65bb656c7879c"].acf-field.acf-field-radio {
+    pointer-events: none;
+    background: rgba(255, 0, 0, 0.08);
+    opacity: 0.5;
+}
+
+[data-key="field_65bb656c7879c"].acf-field .acf-label {
+    display: none;
+}
+[data-key="field_65bb656c7879c"].acf-field .acf-label label {
+    margin: 0;
+}
+
+[data-key="field_65bb656c7879c"].acf-field .acf-radio-list {
+    display: flex;
+    gap: 5px;
+}

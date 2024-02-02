@@ -20,7 +20,7 @@
                 "v1": "v1",
                 "v2": "v2"
             },
-            "default_value": "v2",
+            "default_value": "v1",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -44,6 +44,23 @@
             },
             "layout": "block",
             "sub_fields": [
+                {
+                    "key": "field_65bcebc76dd84",
+                    "label": "Info",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
                 {
                     "key": "field_65bb5276b5543",
                     "label": "Title",
@@ -213,5 +230,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706863675
+    "modified": 1706879969
 }

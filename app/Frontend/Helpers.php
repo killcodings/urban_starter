@@ -19,7 +19,7 @@ class Helpers {
 		];
 	}
 
-	public static function Caramba() : string {
-		 return "Caramba";
+	public static function caramba() {
+		return "Caramba";
 	}
 };

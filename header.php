@@ -1,15 +1,3 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package urban_starter
- */
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -17,7 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+	<?php wp_head();
+	$buttons_setup = get_field('buttons_setup', 'options');
+    ?>
+
+    <style>
+        :root {
+            --button-bg: <?= $buttons_setup['background'] ?: '#D02E4B' ?>;
+            --button-bg-hover: <?= $buttons_setup['background_hover'] ?: '#000' ?>;
+            --button-text-color: <?= $buttons_setup['color'] ?: '#000' ?>;
+            --button-color-hover: <?= $buttons_setup['color_hover'] ?: '#FFF' ?>;
+            --button-border: <?= $buttons_setup['border'] ?: '#000' ?>;
+            --button-border-hover: <?= $buttons_setup['border_hover'] ?: '#FFF' ?>;
+            --button-border-style: <?= $buttons_setup['border_radius'] . 'px' ?: '50px' ?>;
+        }
+    </style>
+
 </head>
 
 <body <?php body_class(); ?>>
