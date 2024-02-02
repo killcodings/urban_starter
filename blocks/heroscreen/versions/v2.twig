@@ -1,0 +1,46 @@
+
+<section class="cg-section__content cg-heroscreen cg-heroscreen-v2"
+         style="--bage-color: #683AEB; --bage-bg:#FFF; --cg-title: #FFF; --cg-text-description: #FFF; --text-align: left; --max-width: 666px; --content-background: #5328CE; --heroscreen-picture-align: flex-end;">
+
+    <div class="cg-heroscreen-v2__sect">
+
+        <div class="cg-heroscreen-v2__content">
+
+            {% if settings.heroscreen_togglecontrol_bage and bage %}
+                <div class="cg-bage cg-bage-v2">
+                    <p class="icon-bage">{{ bage }}</p>
+                </div>
+            {% endif %}
+
+
+            {% if title %}
+                <h1 class="cg-heroscreen__title h1-v2">{{ title }}</h1>
+            {% endif %}
+
+
+            {% if description %}
+                <div class="cg-description cg-heroscreen__text">
+                    <p>{{ description }}</p>
+                </div>
+            {% endif %}
+
+            <div class="cg-buttons cg-heroscreen-v2__buttons">
+                <a class="cg-heroscreen-v2__button cg-button" href="#">
+                    <img src="images/content/cg-laptop-v2.svg" alt="laptop">
+                    <p>Betting Odds</p>
+                </a>
+                <a class="cg-heroscreen-v2__button cg-button" href="#">
+                    <img src="images/content/cg-laptop-v2.svg" alt="laptop">
+                    <p>Betting Odds</p>
+                </a>
+                <a class="cg-heroscreen-v2__button cg-button" href="#">
+                    <img src="images/content/cg-laptop-v2.svg" alt="laptop">
+                    <p>Betting Odds</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="cg-heroscreen-v2__pic">
+        <img src="images/content/cg-heroscreen-v2.png" alt="player">
+    </div>
+</section>

@@ -1,0 +1,31 @@
+
+<section class="cg-section__content cg-heroscreen">
+
+    {% if settings.heroscreen_togglecontrol_bage and bage %}
+        <div class="cg-bage"><p class="icon-bage">{{ bage }}</p></div>
+    {% endif %}
+
+    {% if title %}
+        <h1 class="cg-heroscreen__title">{{ title }}</h1>
+    {% endif %}
+
+    {% if description %}
+        <div class="cg-description cg-heroscreen__text">
+            <p>{{ description }}</p>
+        </div>
+    {% endif %}
+
+    img
+
+    <div class="cg-buttons">
+        <a href="#" class="cg-button"
+           style="--button-bg: #FFF; --button-text-color: #D02E4B; --button-bg-hover: #F9FAFB;">
+            <span class="cg-button__text icon-arrow">Button 1</span>
+        </a>
+        <a href="#" class="cg-button"
+           style="--button-bg: #D02E4B; --button-text-color: #FFF; --button-bg-hover: #B42318;">
+            <span class="cg-button__text icon-arrow">Button 1</span>
+        </a>
+    </div>
+
+</section>

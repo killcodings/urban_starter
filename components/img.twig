@@ -1,0 +1,34 @@
+<img decoding="async"
+
+     loading="{{ 'lazy' }}"
+
+    {% if img.width %}
+        width="{{ img.width }}"
+    {% endif %}
+
+    {% if img.height %}
+        height="{{ img.height }}"
+    {% endif %}
+
+    {% if img.src %}
+        src="{{ img.src }}"
+    {% endif %}
+
+    {% if image.alt %}
+        alt="{{ img.alt }}"
+    {% endif %}
+
+    {% if img.srcset %}
+        srcset="{{ image.srcset }}"
+    {% endif %}
+
+    {% if img.sizes %}
+        sizes="{{ img.sizes }}"
+    {% endif %}
+>
+
+{#  {% if img %}
+      {% include 'components/img.twig' with {
+          'width': img.width,
+      } %}
+  {% endif %}#}

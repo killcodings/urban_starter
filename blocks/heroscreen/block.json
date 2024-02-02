@@ -1,0 +1,13 @@
+{
+  "name": "cg/heroscreen",
+  "title": "Heroscreen",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./view.php"
+  },
+  "editorStyle": "file:./edit.css",
+  "style": [ "file:./style.css" ]
+}

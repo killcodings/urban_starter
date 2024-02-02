@@ -1,0 +1,95 @@
+.wp-block {
+    max-width: 100%;
+}
+
+.wp-block h2 {
+    margin-bottom: 1rem;
+}
+
+.acf-block-preview .author-badge-top {
+    display: none;
+}
+
+.preview-block {
+    box-shadow: inset 0 0 0 1px rgba(169, 169, 169, 0.47);
+    outline: 1px solid transparent;
+    position: relative;
+    min-height: 30px;
+    padding: 26px 3px 3px 3px;
+    border-radius: 3px;
+}
+
+.preview-block__title {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: var(--wp-admin-theme-color);
+    border-radius: 5px;
+    color: #fff;
+    z-index: 10000;
+    padding: 3px;
+}
+
+.wp-block-columns {
+    margin: 1rem 0 !important;
+}
+
+i.mce-i-aligncenter, i.mce-i-alignjustify, i.mce-i-alignleft, i.mce-i-alignright, i.mce-i-backcolor, i.mce-i-blockquote, i.mce-i-bold, i.mce-i-bullist, i.mce-i-charmap, i.mce-i-dashicon, i.mce-i-dfw, i.mce-i-forecolor, i.mce-i-fullscreen, i.mce-i-help, i.mce-i-hr, i.mce-i-indent, i.mce-i-italic, i.mce-i-link, i.mce-i-ltr, i.mce-i-numlist, i.mce-i-outdent, i.mce-i-pastetext, i.mce-i-pasteword, i.mce-i-redo, i.mce-i-remove, i.mce-i-removeformat, i.mce-i-spellchecker, i.mce-i-strikethrough, i.mce-i-underline, i.mce-i-undo, i.mce-i-unlink, i.mce-i-wp-media-library, i.mce-i-wp_adv, i.mce-i-wp_code, i.mce-i-wp_fullscreen, i.mce-i-wp_help, i.mce-i-wp_more, i.mce-i-wp_page {
+    font: normal 20px/1 dashicons !important;
+}
+
+ul.wp-block.wp-block-list {
+    list-style: disc;
+    padding-left: 25px;
+    margin: 1rem 0;
+}
+
+ul.wp-block.wp-block-list li,
+ol.wp-block.wp-block-list li {
+    margin: 1.5rem 0;
+}
+
+ol.wp-block.wp-block-list {
+    list-style: auto !important;
+    padding-left: 20px;
+    margin: 1rem 0;
+}
+
+.mce-content-body {
+    padding: 10px;
+}
+
+.mce-content-body > * {
+    margin-bottom: 1rem;
+}
+
+.mce-content-body ul, .mce-content-body ol {
+    padding-left: 20px;
+}
+
+.mce-content-body ul {
+    list-style: disc;
+}
+
+.mce-content-body ol {
+    list-style: decimal;
+}
+
+
+
+[data-name="select_version_field"].acf-field {
+    pointer-events: none;
+    background: rgba(255, 0, 0, 0.08);
+    opacity: 0.5;
+}
+
+.acf-label {
+    margin: 0;
+}
+.acf-label label {
+    margin: 0;
+}
+
+.acf-radio-list {
+    display: flex;
+}

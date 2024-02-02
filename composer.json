@@ -1,0 +1,17 @@
+{
+    "name": "defaultuser/urban_starter",
+    "autoload": {
+        "psr-4": {
+            "Defaultuser\\UrbanStarter\\": "src/",
+            "Urban\\Frontend\\": "app/Frontend"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "require": {
+        "timber/timber": "^2.0"
+    }
+}
