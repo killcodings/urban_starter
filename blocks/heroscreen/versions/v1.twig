@@ -1,7 +1,9 @@
 
-<section class="cg-section__content cg-heroscreen">
 
-    {% if settings.heroscreen_togglecontrol_bage and bage %}
+{#{{ dump(data) }}#}
+
+<section class="cg-section__content cg-heroscreen">
+    {% if togglecontrol_bage and badge %}
         <div class="cg-bage"><p class="icon-bage">{{ bage }}</p></div>
     {% endif %}
 
@@ -15,17 +17,18 @@
         </div>
     {% endif %}
 
-    img
 
-    <div class="cg-buttons">
-        <a href="#" class="cg-button"
-           style="--button-bg: #FFF; --button-text-color: #D02E4B; --button-bg-hover: #F9FAFB;">
-            <span class="cg-button__text icon-arrow">Button 1</span>
-        </a>
-        <a href="#" class="cg-button"
-           style="--button-bg: #D02E4B; --button-text-color: #FFF; --button-bg-hover: #B42318;">
-            <span class="cg-button__text icon-arrow">Button 1</span>
-        </a>
-    </div>
+    {% if buttons %}
+        <div class="cg-buttons">
+            {% for button in buttons %}
+                {% include 'components/button.twig' with {
+                    'button': button,
+                    'class': 'item'
+                } %}
+            {% endfor %}
+        </div>
+
+    {% endif %}
+
 
 </section>

@@ -1,9 +1,7 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 use Urban\Admin\Admin;
-
-new Admin();
-Admin::register_blocks('heroscreen');
+use Urban\Frontend\Init;
 
 add_action( 'acf/init', function () {
 	if ( function_exists( 'acf_add_options_page' ) ) {
@@ -35,7 +33,10 @@ add_action( 'acf/init', function () {
 	}
 });
 
+new Init();
+new Admin();
 
-if ( ! defined( '_S_VERSION' ) ) {
-	define( '_S_VERSION', '1.0.0' );
-}
+Admin::register_blocks('heroscreen');
+
+
+

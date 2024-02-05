@@ -1,0 +1,12 @@
+
+<div class="cg-buttons">
+    {% for button in buttons %}
+        <a href="#" class="cg-button">
+
+            {% include 'components/img.twig' with {
+                'img': img
+            } %}
+            <span class="cg-button__text icon-arrow">Button 1</span>
+        </a>
+    {% endfor %}
+</div>

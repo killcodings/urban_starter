@@ -11,8 +11,6 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php urban_starter_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
 		the_content(
@@ -40,6 +38,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php urban_starter_entry_footer(); ?>
+		<?php get_footer();?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

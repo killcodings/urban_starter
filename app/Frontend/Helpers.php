@@ -22,4 +22,5 @@ class Helpers {
 	public static function caramba() {
 		return "Caramba";
 	}
+
 };

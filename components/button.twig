@@ -1,0 +1,11 @@
+
+
+<a href="{{ button.btn.link.url }}" class="cg-button"
+   {% if button.colors.style %} style="{{ button.colors.style }}" {% endif %}>
+
+    {% include 'components/img.twig' with {
+        'img': img
+    } %}
+
+    <span class="cg-button__text icon-arrow">{{ button.btn.link.title }}</span>
+</a>

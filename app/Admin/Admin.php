@@ -1,11 +1,11 @@
 <?php
 
 namespace Urban\Admin;
+use Urban\Config;
 
 class Admin {
 	public function __construct() {
 		$this->auto_load_field();
-		$this->enable_html5();
 		$this->login_page_style();
 		$this->navigation_setup();
 	}
@@ -16,26 +16,12 @@ class Admin {
 
 	private function auto_load_field() : void {
 		add_filter('acf/load_field/name=select_version_field', function( $field ) {
-			$field['choices'][VERSION_STYLE] = VERSION_STYLE;
-			$field['value'] = VERSION_STYLE;
-			$field['default_value'] = VERSION_STYLE;
+			$field['choices'][Config::get_chosen_theme()] = Config::get_chosen_theme();
+			$field['value'] = Config::get_chosen_theme();
+			$field['default_value'] = Config::get_chosen_theme();
 			$field['readonly'] = true;
 			return $field;
 		});
-	}
-
-	private function enable_html5(): void {
-		add_action( 'after_setup_theme', function () {
-			add_theme_support( 'html5', [
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-				'style',
-				'script',
-			] );
-		} );
 	}
 
 	private function login_page_style(): void {

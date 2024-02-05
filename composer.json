@@ -2,6 +2,7 @@
     "name": "defaultuser/urban_starter",
     "autoload": {
         "psr-4": {
+            "Urban\\": "app",
             "Urban\\Frontend\\": "app/Frontend",
             "Urban\\Admin\\": "app/Admin",
             "Defaultuser\\UrbanStarter\\": "src/"
