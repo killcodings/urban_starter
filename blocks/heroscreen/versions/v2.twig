@@ -1,12 +1,12 @@
 
-<section class="cg-section__content cg-heroscreen cg-heroscreen-v2"
-         style="--bage-color: #683AEB; --bage-bg:#FFF; --cg-title: #FFF; --cg-text-description: #FFF; --text-align: left; --max-width: 666px; --content-background: #5328CE; --heroscreen-picture-align: flex-end;">
+<section class="cg-section__content cg-heroscreen cg-heroscreen-v2" {{ block_style }}>
 
     <div class="cg-heroscreen-v2__sect">
 
-        <div class="cg-heroscreen-v2__content">
+        <d
+                iv class="cg-heroscreen-v2__content">
 
-            {% if settings.heroscreen_togglecontrol_bage and bage %}
+            {% if togglecontrol_bage and badge %}
                 <div class="cg-bage cg-bage-v2">
                     <p class="icon-bage">{{ bage }}</p>
                 </div>
@@ -24,23 +24,32 @@
                 </div>
             {% endif %}
 
-            <div class="cg-buttons cg-heroscreen-v2__buttons">
-                <a class="cg-heroscreen-v2__button cg-button" href="#">
-                    <img src="images/content/cg-laptop-v2.svg" alt="laptop">
-                    <p>Betting Odds</p>
-                </a>
-                <a class="cg-heroscreen-v2__button cg-button" href="#">
-                    <img src="images/content/cg-laptop-v2.svg" alt="laptop">
-                    <p>Betting Odds</p>
-                </a>
-                <a class="cg-heroscreen-v2__button cg-button" href="#">
-                    <img src="images/content/cg-laptop-v2.svg" alt="laptop">
-                    <p>Betting Odds</p>
-                </a>
-            </div>
+            {% if buttons %}
+                <div class="cg-buttons cg-heroscreen-v2__buttons">
+                    {% for button in buttons %}
+                        {% include 'components/button.twig' with {
+                            'button': button,
+                            'class': 'item'
+                        } %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
         </div>
+
+        {% for image in payment_v2 %}
+            {% include 'components/img.twig' with {
+                'img': image.image_current
+            } %}
+        {% endfor %}
     </div>
-    <div class="cg-heroscreen-v2__pic">
-        <img src="images/content/cg-heroscreen-v2.png" alt="player">
-    </div>
+
+    {% if img_content %}
+        <div class="cg-heroscreen-v2__pic">
+                {% include 'components/img.twig' with {
+                    'img': img_content,
+                    'class': 'v2'
+                } %}
+        </div>
+    {% endif %}
 </section>

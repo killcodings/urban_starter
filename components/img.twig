@@ -1,6 +1,10 @@
 <img decoding="async"
 
-     loading="{{ 'lazy' }}"
+     class = "image {{ img.class }}"
+
+    {% if img.loading %}
+        loading="{{ img.loading }}"
+    {% endif %}
 
     {% if img.width %}
         width="{{ img.width }}"
@@ -14,7 +18,7 @@
         src="{{ img.src }}"
     {% endif %}
 
-    {% if image.alt %}
+    {% if img.alt %}
         alt="{{ img.alt }}"
     {% endif %}
 
@@ -26,9 +30,3 @@
         sizes="{{ img.sizes }}"
     {% endif %}
 >
-
-{#  {% if img %}
-      {% include 'components/img.twig' with {
-          'width': img.width,
-      } %}
-  {% endif %}#}

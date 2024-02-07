@@ -1,8 +1,5 @@
-
-
 {#{{ dump(data) }}#}
-
-<section class="cg-section__content cg-heroscreen">
+<section class="cg-section__content cg-heroscreen" {{ block_style }}>
     {% if togglecontrol_bage and badge %}
         <div class="cg-bage"><p class="icon-bage">{{ bage }}</p></div>
     {% endif %}
@@ -17,7 +14,6 @@
         </div>
     {% endif %}
 
-
     {% if buttons %}
         <div class="cg-buttons">
             {% for button in buttons %}
@@ -27,8 +23,5 @@
                 } %}
             {% endfor %}
         </div>
-
     {% endif %}
-
-
 </section>
